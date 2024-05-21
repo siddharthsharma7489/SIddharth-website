@@ -12038,7 +12038,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #02aab0;
+  background: #b04202;
 }
 
 h1, .h1 {
@@ -12072,7 +12072,7 @@ a:hover {
 }
 
 .dark-blue-text {
-  color: #272341 !important;
+  color: #412323 !important;
 }
 
 .text-color-main {
@@ -12082,7 +12082,7 @@ a:hover {
 
 @supports (-webkit-background-clip: text) or (background-clip: text) {
   .text-color-main {
-    background-image: linear-gradient(135deg, #02aab0 0%, #00cdac 100%);
+    background-image: linear-gradient(135deg, #b04202 0%, #00cdac 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #0000;
@@ -12128,13 +12128,13 @@ a:hover {
   -webkit-border-image-slice: 1;
   border-style: solid;
   border-width: 2px;
-  border-image: linear-gradient(135deg, #02aab0 0%, #00cdac 100%);
+  border-image: linear-gradient(135deg, #b04202 0%, #00cdac 100%);
   border-image-slice: 1;
 }
 
 @supports (-webkit-background-clip: text) or (background-clip: text) {
   .cta-btn--hero {
-    background-image: linear-gradient(135deg, #02aab0 0%, #00cdac 100%);
+    background-image: linear-gradient(135deg, #b04202 0%, #00cdac 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #0000;
@@ -12160,7 +12160,7 @@ a:hover {
 }
 
 .cta-btn--hero:after {
-  background-image: linear-gradient(135deg, #02aab0 0%, #00cdac 100%);
+  background-image: linear-gradient(135deg, #b04202 0%, #00cdac 100%);
 }
 
 @media (max-width: 37.5em) {
@@ -12232,7 +12232,7 @@ a:hover {
 }
 
 .footer__text a:hover, .footer__text a:active {
-  color: #02aab0;
+  color: #b04202;
   box-shadow: 0 1.5rem 4rem #00000026;
 }
 
@@ -12291,8 +12291,8 @@ section {
   color: #fff;
   height: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  background-color: #02aab0;
-  background-image: linear-gradient(135deg, #02aab0 0%, #00cdac 100%);
+  background-color: #b04202;
+  background-image: linear-gradient(135deg, #b04202 0%, #00cdac 100%);
   border-top: 0;
   padding-bottom: 10%;
 }
@@ -12380,7 +12380,7 @@ section {
 #contact {
   clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
   color: #fff;
-  background-image: linear-gradient(135deg, #02aab0 0%, #00cdac 100%);
+  background-image: linear-gradient(135deg, #b04202 0%, #00cdac 100%);
   margin-top: -10rem;
   margin-bottom: -1px;
   padding: 15rem 0 10rem;
@@ -12417,7 +12417,7 @@ section {
 #hero {
   min-height: 100vh;
   height: 100vh;
-  color: #272341;
+  color: #412323;
   z-index: -1;
   background: #fff;
   border-bottom: 0;
@@ -12489,7 +12489,7 @@ section {
 }
 
 #projects {
-  color: #272341;
+  color: #412323;
   background-color: #fff;
   margin-top: -10rem;
   padding-top: 15rem;
