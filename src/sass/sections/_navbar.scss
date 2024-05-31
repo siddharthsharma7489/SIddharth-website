@@ -1,68 +1,85 @@
 /* Navbar Styles */
 .navbar {
-    background-color: #333;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
     color: #fff;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-  
-    .container {
-      display: flex;
-      justify-content: space-between;
+    text-decoration: none;
+  }
+
+  .navbar-toggler {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; /* Hide the toggler by default */
+  }
+
+  .navbar-collapse {
+    .navbar-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex; /* Horizontal layout */
       align-items: center;
-    }
-  
-    .navbar-brand {
-      font-size: 1.5rem;
-      color: #fff;
-      text-decoration: none;
-    }
-  
-    .navbar-toggler {
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-  
-    .navbar-collapse {
-      display: none;
-  
-      .navbar-nav {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-  
-        .nav-item {
-          margin-left: 1rem;
-  
-          .nav-link {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s;
-  
-            &:hover {
-              color: #1e90ff;
-            }
+
+      .nav-item {
+        margin-left: 1rem;
+
+        .nav-link {
+          color: #fff;
+          text-decoration: none;
+          font-size: 1rem;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #1e90ff;
           }
         }
       }
     }
   }
-  
-  /* Responsive Styles */
-  @media (min-width: 768px) {
-    .navbar-collapse {
-      display: flex !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block; /* Show the toggler on small screens */
+  }
+
+  .navbar-collapse {
+    display: none; /* Hide the navbar links by default */
+
+    &.show {
+      display: block; /* Show the navbar links when toggled */
     }
-  
-    .navbar-toggler {
-      display: none;
+
+    .navbar-nav {
+      flex-direction: column; /* Stack the links vertically on small screens */
+      align-items: flex-start;
+
+      .nav-item {
+        margin-left: 0;
+        margin-bottom: 1rem;
+
+        .nav-link {
+          font-size: 1.2rem; /* Increase font size for better readability on small screens */
+        }
+      }
     }
   }
-  
+}
