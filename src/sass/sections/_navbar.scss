@@ -1,12 +1,14 @@
 /* Navbar Styles */
 .navbar {
-  background-color: #333;
+  background: linear-gradient(to right, #0cc187, #20ec75);
   color: #fff;
   padding: 1rem 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 10;
+  box-shadow: 0 4px 6px rgba(4, 151, 87, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
   .container {
     display: flex;
@@ -15,9 +17,15 @@
   }
 
   .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #f3ec78;
+    }
   }
 
   .navbar-toggler {
@@ -27,6 +35,34 @@
     font-size: 1.5rem;
     cursor: pointer;
     display: none; /* Hide the toggler by default */
+    position: relative;
+
+    .navbar-toggler-icon {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      display: block;
+      position: relative;
+      transition: background-color 0.3s ease;
+
+      &:before,
+      &:after {
+        content: "";
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        transition: transform 0.3s ease;
+      }
+
+      &:before {
+        top: -8px;
+      }
+
+      &:after {
+        bottom: -8px;
+      }
+    }
   }
 
   .navbar-collapse {
@@ -38,20 +74,28 @@
       align-items: center;
 
       .nav-item {
-        margin-left: 1rem;
+        margin-left: 1.5rem;
 
         .nav-link {
           color: #fff;
           text-decoration: none;
           font-size: 1rem;
-          transition: color 0.3s;
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          transition: color 0.3s ease, background-color 0.3s ease;
 
           &:hover {
-            color: #1e90ff;
+            color: #f3ec78;
+            background-color: rgba(255, 255, 255, 0.1);
           }
         }
       }
     }
+  }
+
+  /* Add a background overlay on smaller screens */
+  &.active {
+    background-color: rgba(51, 51, 51, 0.9);
   }
 }
 
@@ -66,6 +110,13 @@
 
     &.show {
       display: block; /* Show the navbar links when toggled */
+      background-color: rgba(51, 51, 51, 0.9);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .navbar-nav {

@@ -12580,4 +12580,135 @@ section {
   }
 }
 
+.navbar {
+  color: #fff;
+  width: 100%;
+  z-index: 10;
+  background: linear-gradient(to right, #0cc187, #20ec75);
+  padding: 1rem 0;
+  transition: background-color .3s, box-shadow .3s;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+.navbar .container {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.navbar .navbar-brand:hover {
+  color: #f3ec78;
+}
+
+.navbar .navbar-toggler {
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  display: none;
+  position: relative;
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: background-color .3s;
+  display: block;
+  position: relative;
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon:before, .navbar .navbar-toggler .navbar-toggler-icon:after {
+  content: "";
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: transform .3s;
+  position: absolute;
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon:before {
+  top: -8px;
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon:after {
+  bottom: -8px;
+}
+
+.navbar .navbar-collapse .navbar-nav {
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.navbar .navbar-collapse .navbar-nav .nav-item {
+  margin-left: 1.5rem;
+}
+
+.navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+  color: #fff;
+  border-radius: 20px;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color .3s, background-color .3s;
+}
+
+.navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+  color: #f3ec78;
+  background-color: #ffffff1a;
+}
+
+.navbar.active {
+  background-color: #333333e6;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none;
+  }
+
+  .navbar-collapse.show {
+    width: 100%;
+    background-color: #333333e6;
+    padding: 1rem;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 4px 6px #0000001a;
+  }
+
+  .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-collapse .navbar-nav .nav-item {
+    margin-bottom: 1rem;
+    margin-left: 0;
+  }
+
+  .navbar-collapse .navbar-nav .nav-item .nav-link {
+    font-size: 1.2rem;
+  }
+}
+
 /*# sourceMappingURL=index.4a508c1d.css.map */

@@ -540,6 +540,13 @@ var _tiltAnimationDefault = parcelHelpers.interopDefault(_tiltAnimation);
 var _scrollRevealConfig = require("./data/scrollRevealConfig");
 (0, _scrollRevealDefault.default)((0, _scrollRevealConfig.targetElements), (0, _scrollRevealConfig.defaultProps));
 (0, _tiltAnimationDefault.default)();
+document.addEventListener("DOMContentLoaded", function() {
+    const toggler = document.querySelector(".navbar-toggler");
+    const collapse = document.querySelector(".navbar-collapse");
+    toggler.addEventListener("click", function() {
+        collapse.classList.toggle("show");
+    });
+});
 
 },{"./scripts/scrollReveal":"54rka","./scripts/tiltAnimation":"72kAb","./data/scrollRevealConfig":"5aORV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"54rka":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
